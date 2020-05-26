@@ -16,22 +16,22 @@ namespace StatePat
         }
         public override string AddBread(Context context, Cart cart)
         {
-            cart.AddItemToCart(new Product(2, "bread", 5));
+            cart.AddItemToCart(new Product(2, "bread", 2));
             return "Adding bread to the cart !";
         }
         public override string AddEggs(Context context, Cart cart)
         {
-            cart.AddItemToCart(new Product(3, "eggs", 5));
+            cart.AddItemToCart(new Product(3, "eggs", 3));
             return "Adding eggs to the cart !";
         }
         public override string AddOranges(Context context, Cart cart)
         {
-            cart.AddItemToCart(new Product(4, "oranges", 5));
+            cart.AddItemToCart(new Product(4, "oranges", 6));
             return "Adding oranges to the cart !";
         }
         public override string AddPepsi(Context context, Cart cart)
         {
-            cart.AddItemToCart(new Product(5, "pepsi", 5));
+            cart.AddItemToCart(new Product(5, "pepsi", 4));
             return "Adding pepsi to the cart !";
         }
     }

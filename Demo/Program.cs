@@ -17,6 +17,7 @@ namespace Demo
             Console.WriteLine("************************************");
             Context context = new Context();
             context.Add = new Adding();
+            Console.WriteLine("State:Adding products..");
             char command = ' ';
             string choice;
             int productID = 0;
