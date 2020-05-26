@@ -1,0 +1,16 @@
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\obj\Debug\netcoreapp3.1\Demo.csprojAssemblyReference.cache
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\obj\Debug\netcoreapp3.1\Demo.AssemblyInfoInputs.cache
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\obj\Debug\netcoreapp3.1\Demo.AssemblyInfo.cs
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\obj\Debug\netcoreapp3.1\Demo.csproj.CoreCompileInputs.cache
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\bin\Debug\netcoreapp3.1\Demo.exe
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\bin\Debug\netcoreapp3.1\Demo.deps.json
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\bin\Debug\netcoreapp3.1\Demo.runtimeconfig.json
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\bin\Debug\netcoreapp3.1\Demo.runtimeconfig.dev.json
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\bin\Debug\netcoreapp3.1\Demo.dll
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\bin\Debug\netcoreapp3.1\Demo.pdb
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\bin\Debug\netcoreapp3.1\ShoppingCart.dll
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\bin\Debug\netcoreapp3.1\ShoppingCart.pdb
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\obj\Debug\netcoreapp3.1\Demo.csproj.CopyComplete
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\obj\Debug\netcoreapp3.1\Demo.dll
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\obj\Debug\netcoreapp3.1\Demo.pdb
+C:\Users\sayby\source\repos\ConsoleApp1\Demo\obj\Debug\netcoreapp3.1\Demo.genruntimeconfig.cache
