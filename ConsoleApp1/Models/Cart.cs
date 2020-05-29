@@ -27,14 +27,15 @@ namespace ShoppingCart.Models
             }
             return "Product has been succesfully added";
         }
-        public string DiscardItemFromCart(Product product)
+        public string DiscardItemFromCart(int id)
         {
-            this._Cart.Remove(product);
-            if (product == null)
+            var rawProduct = this._Cart.FirstOrDefault(i => i.ProductID == id);
+            this._Cart.Remove(rawProduct);
+            if (rawProduct == null)
             {
-                return "Failed to add product to cart";
+                return "Failed to remove product from cart";
             }
-            return "Product has been succesfully added";
+            return "Product has been removed successfully";
         }
         public bool CheckItemAvailability(string product)
         {
