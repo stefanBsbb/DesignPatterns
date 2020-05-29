@@ -24,7 +24,7 @@ namespace ShoppingCart.State_Pattern
         public override string DiscardEggs(Context context, Cart cart)
         {
             cart.DiscardItemFromCart(3);
-            return "Removing eggs from the cart!";
+            return "Removing eggs from the cart   !";
         }
         public override string DiscardOranges(Context context, Cart cart)
         {
