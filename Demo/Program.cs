@@ -51,17 +51,13 @@ namespace Demo
             {
                 for (int i = 0; i < 2; i++)
                 {
-
-
                     Console.WriteLine("Please select a product to discard! 'm' for milk,'b' for bread,'e' for eggs,'o' for oranges,'p' for pepsi");
                     do
                         choice = Console.ReadLine();
                     while (choice == null);
                     command = choice[0];
                     context.DiscardRequest(command);
-
-                }
-            
+                }            
             }
             else
             {
@@ -72,7 +68,6 @@ namespace Demo
             Console.WriteLine("************************************");
             int orderID = context.cart.PlaceOrder(cartID, userID);
             Console.WriteLine("************************************");
-
             Console.ReadLine();
         }
 
