@@ -9,7 +9,7 @@ using System.Text;
 
 namespace ShoppingCart.Models
 {
-    public class Cart :BaseCart,ICart
+    public class Cart : BaseCart, ICart
     {
 
 
@@ -49,24 +49,30 @@ namespace ShoppingCart.Models
 
         public double GetCartPrice(int cartID)
         {
-            
+
             var ProductsCost = this._Cart.Sum(i => i.Cost);
             Console.WriteLine("\t  Total price :" + ProductsCost);
-            return ProductsCost; 
+            return ProductsCost;
 
         }
         public void ApplyTax(int cartID, double taxPercent)
         {
             double cartPrice = this._Cart.Sum(i => i.Cost);
             double taxTotal = cartPrice + cartPrice / taxPercent;
-            Console.WriteLine("Total money with tax:"+ taxTotal); 
+            Console.WriteLine("Total money with tax:" + taxTotal);
+            if (_Cart == null)
+            {
+                Console.WriteLine("Something bad happend");
+            }
+
         }
         public string GetItemDetails(int id)
         {
-
             var rawProduct = this._Cart.FirstOrDefault(i => i.ProductID == id);
             if (rawProduct == null)
-            { return "Product not found"; }
+            {
+                return "Product not found";
+            }
             return $"Product: {rawProduct.Name} - {rawProduct.Cost}";
         }
         public bool LockItemInStock(int productID)
@@ -82,10 +88,13 @@ namespace ShoppingCart.Models
             //Step 1 : GetItem
             string product = GetItemDetails(productID);
             //Step 2 : Check Availability
-            if (CheckItemAvailability(product))
+            if (product != "Product not found")
             {
-                //Step 3 : Lock Item in the Stock
-                LockItemInStock(productID);
+                if (CheckItemAvailability(product))
+                {
+                    //Step 3 : Lock Item in the Stock
+                    LockItemInStock(productID);
+                }
             }
             Console.WriteLine("Check has ended");
             return cartID;
@@ -100,9 +109,20 @@ namespace ShoppingCart.Models
             IAddress address = new AddressDetails();
             IOrder order = new Order();
             //Step 1 : Get Tax percentage by State
-            Console.WriteLine("Please select a state , options : a,b,c,d");
-            char state =Convert.ToChar(Console.ReadLine());
-            double stateTax = tax.GetTaxByState(state);     
+            Console.WriteLine("Please select a state , options : a,b,c,d, note: default tax is 'b' if no options are selected!");
+            string choice = "";
+            char state = ' ';
+            choice = Console.ReadLine();
+
+            if (choice != null && choice != "")
+            {
+                
+                state = choice[0];
+            }
+
+
+            double stateTax = tax.GetTaxByState(state);
+
             //Step 2 : Get user Wallet balance
             double userWalletBalance = wallet.GetUserBalance(userID);
             //Step 3 : Get the cart items price

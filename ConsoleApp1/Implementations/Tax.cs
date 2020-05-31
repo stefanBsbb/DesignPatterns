@@ -7,10 +7,7 @@ namespace ShoppingCart.Implementations
 {
     public class Tax : ITax
     {
-        public void ApplyTax(int cartID, double taxPercent)
-        {
-            
-        }
+
         public double GetTaxByState(char state)
         {
             double result = 0;
@@ -20,7 +17,7 @@ namespace ShoppingCart.Implementations
                 case 'b':result = 1;break;
                 case 'c':result = 1.5;break;
                 case 'd':result = 3.0;break;
-                default:break;
+                default:;result = 1; break;
             }
             return result;
         }

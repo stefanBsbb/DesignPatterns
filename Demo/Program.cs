@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using ShoppingCart.Interfaces;
 using System.Xml.Serialization;
 using ShoppingCart.State_Pattern;
+using System.Text;
 
 namespace Demo
 {
@@ -21,48 +22,73 @@ namespace Demo
             context.Discard = new Discarding();
             Console.WriteLine("State:Adding products..");
             char command = ' ';
-            string choice;
-            string choiceD;
+            string choiceD = "";
+            string choiceDD = "";
+            string choice = "";
             int productID = 0;
-            for (int i = 0; i < 2; i++)
+
+            while (choice != null)
             {
                 Console.WriteLine("Please select a product! 'm' for milk,'b' for bread,'e' for eggs,'o' for oranges,'p' for pepsi");
-                do
-                    choice = Console.ReadLine();
-                while (choice == null);
-                command = choice[0];
-                context.Request(command);
-                switch (char.ToLower(command))
-                {
-                    case 'm': productID = 1; break;
-                    case 'b': productID = 2; break;
-                    case 'e': productID = 3; break;
-                    case 'o': productID = 4; break;
-                    case 'p': productID = 5; break;
-                    default:
-                        break;
-                }
-                context.cart.CheckProduct(productID);
-            }
+                Console.WriteLine("Press ESC to stop");
+                choice = readLineWithCancel();
 
+                if (choice == "")
+                {
+                    Console.WriteLine("Input cant be null");
+                }
+                if (choice != null && choice != "")
+                {
+
+                    command = choice[0];
+                    context.Request(command);
+                    switch (char.ToLower(command))
+                    {
+                        case 'm': productID = 1; break;
+                        case 'b': productID = 2; break;
+                        case 'e': productID = 3; break;
+                        case 'o': productID = 4; break;
+                        case 'p': productID = 5; break;
+                        default: productID = 0; break;
+                    }
+                    if (productID != 0)
+                    {
+                        context.cart.CheckProduct(productID);
+                    }
+                }
+
+
+            }
             Console.WriteLine("Do u wish to discard products? y/n");
             choiceD = Console.ReadLine();
+
             if (choiceD == "y")
             {
-                for (int i = 0; i < 2; i++)
+                while (choiceDD != null)
                 {
                     Console.WriteLine("Please select a product to discard! 'm' for milk,'b' for bread,'e' for eggs,'o' for oranges,'p' for pepsi");
-                    do
-                        choice = Console.ReadLine();
-                    while (choice == null);
-                    command = choice[0];
-                    context.DiscardRequest(command);
-                }            
+                    Console.WriteLine("Press ESC to stop");
+                    choiceDD = readLineWithCancel();
+                    if (choiceDD == "")
+                    {
+                        Console.WriteLine("Input cant be null");
+                    }
+                    if (choiceDD != null && choiceDD != "")
+                    {
+                        command = choiceDD[0];
+                        context.DiscardRequest(command);
+                    }
+                }
+            }
+            if (choiceD == "n")
+            {
+                Console.WriteLine("Proceeding to orderdetails..");
             }
             else
             {
-                Console.WriteLine("wrong key!, proceeding order");
+                Console.WriteLine("wrong key");
             }
+
             int cartID = 1234;
             int userID = 1234;
             Console.WriteLine("************************************");
@@ -71,5 +97,26 @@ namespace Demo
             Console.ReadLine();
         }
 
+
+        private static string readLineWithCancel()
+        {
+            string result = null;
+
+            StringBuilder buffer = new StringBuilder();
+            ConsoleKeyInfo info = Console.ReadKey(true);
+            while (info.Key != ConsoleKey.Enter && info.Key != ConsoleKey.Escape)
+            {
+                Console.Write(info.KeyChar);
+                buffer.Append(info.KeyChar);
+                info = Console.ReadKey(true);
+            }
+
+            if (info.Key == ConsoleKey.Enter)
+            {
+                result = buffer.ToString();
+            }
+
+            return result;
+        }
     }
 }
