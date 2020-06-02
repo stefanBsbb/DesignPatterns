@@ -3,6 +3,7 @@ using ShoppingCart.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using ShoppingCart.Implementations;
 
 namespace StatePat
 {
@@ -11,28 +12,37 @@ namespace StatePat
         public Cart cart = new Cart();
         public AddAb Add { get; set; }
         public DiscardAb Discard { get; set; }
-        public void Request(char c)
+        public void AddRequest(char c)
 
-        { 
+        {
             string result;
             switch (char.ToLower(c))
             {
-                case 'm': result = Add.AddMilk(this,cart);
-                    
-                    break;
-                case 'b': result = Add.AddBread(this,cart);
+                case 'm':
+                    result = Add.AddMilk(this, cart);
 
                     break;
-                case 'e': result = Add.AddEggs(this,cart);
+                case 'b':
+                    result = Add.AddBread(this, cart);
 
                     break;
-                case 'o': result = Add.AddOranges(this,cart);
+                case 'e':
+                    result = Add.AddEggs(this, cart);
 
                     break;
-                case 'p': result = Add.AddPepsi(this,cart);
+                case 'o':
+                    result = Add.AddOranges(this, cart);
 
                     break;
-                default:result = "Try again";
+                case 'p':
+                    result = Add.AddPepsi(this, cart);
+
+                    break;
+
+                case 'f': result = "";
+                    break;
+                default:
+                    result = "   Try again";
                     break;
             }
             Console.WriteLine(result);
@@ -61,10 +71,14 @@ namespace StatePat
                     break;
                 case 'p':
                     result = Discard.DiscardPepsi(this, cart);
-
                     break;
+
+                case 'f':
+                    result = "";
+                    break;
+
                 default:
-                    result = "Try again";
+                    result = "  Try again";
                     break;
             }
             Console.WriteLine(result);

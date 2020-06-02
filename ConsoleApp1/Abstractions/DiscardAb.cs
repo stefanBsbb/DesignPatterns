@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ShoppingCart.Implementations;
 using ShoppingCart.Models;
 using StatePat;
 namespace ShoppingCart.Abstractions

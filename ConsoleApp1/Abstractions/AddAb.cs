@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using StatePat;
+using ShoppingCart.Implementations;
+
 namespace ShoppingCart.Abstractions
 {
     public abstract class AddAb

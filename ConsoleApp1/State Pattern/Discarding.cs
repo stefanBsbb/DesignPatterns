@@ -6,6 +6,7 @@ using System.Text;
 using ShoppingCart.Abstractions;
 using StatePat;
 using System.Linq;
+using ShoppingCart.Implementations;
 
 namespace ShoppingCart.State_Pattern
 {

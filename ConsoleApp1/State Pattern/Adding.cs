@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using ShoppingCart.Abstractions;
+using ShoppingCart.Implementations;
+
 namespace StatePat
 {
     public class Adding : AddAb
@@ -13,8 +15,6 @@ namespace StatePat
         {
             cart.AddItemToCart(new Product(1,"milk",5));
             return "  Adding milk to the cart !";
-
-
         }
         public override string AddBread(Context context, Cart cart)
         {

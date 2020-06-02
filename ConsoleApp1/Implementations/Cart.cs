@@ -1,32 +1,18 @@
 ﻿using ShoppingCart.Abstractions;
-using ShoppingCart.Implementations;
 using ShoppingCart.Interfaces;
-using StatePat;
+using ShoppingCart.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ShoppingCart.Models
+namespace ShoppingCart.Implementations
 {
     public class Cart : BaseCart, ICart
     {
-
-
-        public int CartID { get; set; }
-        public int UserID { get; set; }
-
         public override List<Product> _Cart { get; set; } = new List<Product>();
 
-        public string AddItemToCart(Product product)
-        {
-            this._Cart.Add(product);
-            if (product == null)
-            {
-                return "Failed to add product to cart";
-            }
-            return "Product has been succesfully added";
-        }
+
         public string DiscardItemFromCart(int id)
         {
             var rawProduct = this._Cart.FirstOrDefault(i => i.ProductID == id);
@@ -59,7 +45,7 @@ namespace ShoppingCart.Models
         {
             double cartPrice = this._Cart.Sum(i => i.Cost);
             double taxTotal = cartPrice + cartPrice / taxPercent;
-            Console.WriteLine("Total money with tax:" + taxTotal);
+            Console.WriteLine("\t  Total money with tax:" + taxTotal);
             if (_Cart == null)
             {
                 Console.WriteLine("Something bad happend");
@@ -77,8 +63,21 @@ namespace ShoppingCart.Models
         }
         public bool LockItemInStock(int productID)
         {
-            Console.WriteLine("Locking item");
-            return true;
+            if (productID != 0)
+            {
+                Console.WriteLine("Locking item");
+                return true;
+            }
+            return false;
+        }
+        public string AddItemToCart(Product product)
+        {
+            this._Cart.Add(product);
+            if (product == null)
+            {
+                return "Failed to add product to cart";
+            }
+            return "Product has been succesfully added";
         }
         //FACADE--------
         public int CheckProduct(int productID)
@@ -99,7 +98,6 @@ namespace ShoppingCart.Models
             Console.WriteLine("Check has ended");
             return cartID;
         }
-
         public int PlaceOrder(int cartID, int userID)
         {
             Console.WriteLine("Start PlaceOrderDetails");
@@ -109,20 +107,17 @@ namespace ShoppingCart.Models
             IAddress address = new AddressDetails();
             IOrder order = new Order();
             //Step 1 : Get Tax percentage by State
-            Console.WriteLine("Please select a state , options : a,b,c,d, note: default tax is 'b' if no options are selected!");
+            Console.WriteLine("Please select a state , options : a,b,c,d, note: default tax is 'b' if no valid options are selected!");
             string choice = "";
             char state = ' ';
             choice = Console.ReadLine();
 
             if (choice != null && choice != "")
             {
-                
+
                 state = choice[0];
             }
-
-
             double stateTax = tax.GetTaxByState(state);
-
             //Step 2 : Get user Wallet balance
             double userWalletBalance = wallet.GetUserBalance(userID);
             //Step 3 : Get the cart items price
@@ -143,3 +138,4 @@ namespace ShoppingCart.Models
         }
     }
 }
+
