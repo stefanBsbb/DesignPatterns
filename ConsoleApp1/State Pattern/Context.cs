@@ -12,6 +12,7 @@ namespace StatePat
         public Cart cart = new Cart();
         public AddAb Add { get; set; }
         public DiscardAb Discard { get; set; }
+        public PaymentAb Payment { get; set; }
         public void AddRequest(char c)
 
         {
@@ -72,6 +73,80 @@ namespace StatePat
                 case 'p':
                     result = Discard.DiscardPepsi(this, cart);
                     break;
+
+                case 'f':
+                    result = "";
+                    break;
+
+                default:
+                    result = "  Try again";
+                    break;
+            }
+            Console.WriteLine(result);
+        }
+        public void PaymentGatewayRequest(char c)
+
+        {
+            string result;
+            switch (char.ToLower(c))
+            {
+                case 'c':
+                    result = Payment.Card(this);
+
+                    break;
+                case 'n':
+                    result = Payment.NetBanking(this);
+                    break;
+
+                  
+                case 'f':
+                    result = "";
+                    break;
+
+                default:
+                    result = "  Try again";
+                    break;
+            }
+            Console.WriteLine(result);
+        }
+
+        public void PaymentMethodRequestCard(char c)
+        {
+            string result;
+            switch (char.ToLower(c))
+            {
+                case 'c':
+                    result = Payment.CardCITI(this);
+
+                    break;
+                case 'i':
+                    result = Payment.CardIDBI(this);
+                    break;
+
+
+                case 'f':
+                    result = "";
+                    break;
+
+                default:
+                    result = "  Try again";
+                    break;
+            }
+            Console.WriteLine(result);
+        }
+        public void PaymentMethodRequestNet(char c)
+        {
+            string result;
+            switch (char.ToLower(c))
+            {
+                case 'c':
+                    result = Payment.NetCITI(this);
+
+                    break;
+                case 'i':
+                    result = Payment.NetIDBI(this);
+                    break;
+
 
                 case 'f':
                     result = "";

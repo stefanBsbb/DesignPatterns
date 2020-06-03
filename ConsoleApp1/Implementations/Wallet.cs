@@ -10,7 +10,7 @@ namespace ShoppingCart.Implementations
         public double GetUserBalance(int userID)
         {
             Random rand = new Random();            
-            double balance = rand.Next(50,500);
+            double balance = rand.Next(1,500);
             Console.WriteLine("\t  Wallet : " + balance);
             return balance;
         }

@@ -17,6 +17,7 @@ namespace Demo
             Init newInit = new Init();
             newInit.AddProdToCart();
             newInit.DiscardProdFromCart();
+            newInit.Payment();
             newInit.PlaceOrder();
         }
     }

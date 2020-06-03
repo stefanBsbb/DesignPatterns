@@ -106,16 +106,23 @@ namespace ShoppingCart.Implementations
             ITax tax = new Tax();
             IAddress address = new AddressDetails();
             IOrder order = new Order();
-            //Step 1 : Get Tax percentage by State
-            Console.WriteLine("Please select a state , options : a,b,c,d, note: default tax is 'b' if no valid options are selected!");
+            //Step 1 : Get Tax percentage by State            
             string choice = "";
             char state = ' ';
-            choice = Console.ReadLine();
-
-            if (choice != null && choice != "")
+            while (choice.Length != 1)
             {
-
-                state = choice[0];
+                Console.WriteLine("Please select a state , options : a,b,c,d, note: default tax is 'b' if no valid options are selected!");
+                choice = Console.ReadLine();
+                if (choice == "" || choice.Length > 1)
+                {
+                    Console.WriteLine("   Invalid input!");
+                }
+                else if (choice == "a" || choice == "b" || choice == "c" || choice == "d")
+                {
+                    state = choice[0];
+                }
+                else
+                { choice = ""; }
             }
             double stateTax = tax.GetTaxByState(state);
             //Step 2 : Get user Wallet balance
@@ -131,7 +138,10 @@ namespace ShoppingCart.Implementations
                 Address userAddress = address.GetAddressDetails(userID);
                 //Step 7 : Place the order
                 orderID = order.PlaceOrderDetails(cartID, userAddress.AddressID);
-
+            }
+            else
+            {
+                Console.WriteLine("Not enought money !");
             }
             Console.WriteLine("End PlaceOrderDetails");
             return orderID;
