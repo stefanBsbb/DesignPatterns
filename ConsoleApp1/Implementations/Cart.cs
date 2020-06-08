@@ -12,7 +12,7 @@ namespace ShoppingCart.Implementations
     {
         public override List<Product> _Cart { get; set; } = new List<Product>();
 
-
+        //discards item from cart
         public string DiscardItemFromCart(int id)
         {
             var rawProduct = this._Cart.FirstOrDefault(i => i.ProductID == id);
@@ -23,6 +23,7 @@ namespace ShoppingCart.Implementations
             }
             return "Product has been removed successfully";
         }
+        //checks item , pretty much always true if product isnt null
         public bool CheckItemAvailability(string product)
         {
             if (product != null)
@@ -32,7 +33,7 @@ namespace ShoppingCart.Implementations
             return false;
 
         }
-
+        //sums product price into a cartprice
         public double GetCartPrice(int cartID)
         {
 
@@ -41,6 +42,7 @@ namespace ShoppingCart.Implementations
             return ProductsCost;
 
         }
+        //applies cart price based on user input for state
         public void ApplyTax(int cartID, double taxPercent)
         {
             double cartPrice = this._Cart.Sum(i => i.Cost);
@@ -52,6 +54,7 @@ namespace ShoppingCart.Implementations
             }
 
         }
+        //gets item details
         public string GetItemDetails(int id)
         {
             var rawProduct = this._Cart.FirstOrDefault(i => i.ProductID == id);
@@ -61,6 +64,7 @@ namespace ShoppingCart.Implementations
             }
             return $"Product: {rawProduct.Name} - {rawProduct.Cost}";
         }
+        //locks item
         public bool LockItemInStock(int productID)
         {
             if (productID != 0)
@@ -70,6 +74,7 @@ namespace ShoppingCart.Implementations
             }
             return false;
         }
+        //adds item to cart
         public string AddItemToCart(Product product)
         {
             this._Cart.Add(product);
