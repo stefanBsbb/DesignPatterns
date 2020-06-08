@@ -141,7 +141,7 @@ namespace ShoppingCart.Implementations
             }
             else
             {
-                Console.WriteLine("Not enought money !");
+                Console.WriteLine("Not enough money !");
             }
             Console.WriteLine("End PlaceOrderDetails");
             return orderID;

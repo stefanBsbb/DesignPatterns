@@ -17,7 +17,6 @@ namespace ShoppingCart.Models
             this.ProductID = id;
             this.Name = n;
             this.Cost = c;
-
         }
     }
 }
