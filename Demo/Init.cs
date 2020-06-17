@@ -21,12 +21,13 @@ namespace Demo
             string choice = "";
             while (choice != "f")
             {
-                Console.WriteLine("Please select a product! 'm' for milk,'b' for bread,'e' for eggs,'o' for oranges,'p' for pepsi");
+                Console.WriteLine("\nPlease select a product!\n'm' for milk,\n'b' for bread,\n'e' for eggs,\n'o' for oranges,\n'p' for pepsi");
                 Console.WriteLine("Press ESC to stop");
                 choice = ReadLineWithCancel();
+                Console.WriteLine();
                 if (choice == "" || choice.Length > 1)
                 {
-                    Console.WriteLine("   Invalid input!");
+                    Console.WriteLine("\nInvalid input!");
                 }
                 else
                 {
@@ -49,13 +50,17 @@ namespace Demo
             context.Discard = new Discarding();
             while (choiceD.Length != 1)
             {
+                Console.WriteLine("\nAll products selected:");
+                context.PrintCart();
+                Console.WriteLine();
                 Console.WriteLine("Do u wish to discard products? y/n");
                 choiceD = Console.ReadLine();
+                Console.WriteLine();
                 if (choiceD == "y" || choiceD == "n") { }
 
                 else
                 {
-                    Console.WriteLine("   Try again !");
+                    Console.WriteLine("\nTry again!");
                     choiceD = "";
                 }
             }
@@ -64,12 +69,13 @@ namespace Demo
             {
                 while (choiceDD != "f")
                 {
-                    Console.WriteLine("Please select a product to discard! 'm' for milk,'b' for bread,'e' for eggs,'o' for oranges,'p' for pepsi");
+                    Console.WriteLine("Please select a product to discard!\n'm' for milk,\n'b' for bread,\n'e' for eggs,\n'o' for oranges,\n'p' for pepsi");
                     Console.WriteLine("Press ESC to stop");
                     choiceDD = ReadLineWithCancel();
+                    Console.WriteLine();
                     if (choiceDD == "" || choiceDD.Length > 1)
                     {
-                        Console.WriteLine("   Invalid input!");
+                        Console.WriteLine("\nInvalid input!");
                     }
                     else
                     if (choiceDD != null && choiceDD != "")
@@ -77,6 +83,9 @@ namespace Demo
                         command = choiceDD[0];
                         context.DiscardRequest(command);
                     }
+                    Console.WriteLine("Your products:");
+                    context.PrintCart();
+                    Console.WriteLine();
                 }
             }
             if (choiceD == "n")
@@ -111,11 +120,12 @@ namespace Demo
             context.Payment = new Paying();
             while (PaymentChoice.Length != 1)
             {
-                Console.WriteLine("Please select a payment gateway! 'c' for card,'n' for netbanking");
+                Console.WriteLine("Please select a payment gateway!\n'c' for card,\n'n' for netbanking");
                 PaymentChoice = Console.ReadLine();
+                Console.WriteLine();
                 if (PaymentChoice == "" || PaymentChoice.Length > 1)
                 {
-                    Console.WriteLine("   Invalid input!");
+                    Console.WriteLine("\nInvalid input!");
                 }
                 else if (PaymentChoice == "c" || PaymentChoice == "n")
                 {
@@ -133,11 +143,12 @@ namespace Demo
             context.Payment = new Paying();
             while (choice.Length != 1)
             {
-                Console.WriteLine("Please select a payment method! 'c' for citi payment system ,'i' for idbi payment system");
+                Console.WriteLine("Please select a payment method!\n'c' for citi payment system ,\n'i' for idbi payment system");
                 choice = Console.ReadLine();
+                Console.WriteLine();
                 if (choice == "" || choice.Length > 1)
                 {
-                    Console.WriteLine("   Invalid input!");
+                    Console.WriteLine("\nInvalid input!");
                 }
                 else if (choice == "c" || choice == "i")
                 {
@@ -154,11 +165,12 @@ namespace Demo
             context.Payment = new Paying();
             while (choice.Length != 1)
             {
-                Console.WriteLine("Please select a payment method! 'c' for citi payment system ,'i' for idbi payment system");
+                Console.WriteLine("Please select a payment method!\n'c' for citi payment system ,\n'i' for idbi payment system");
                 choice = Console.ReadLine();
+                Console.WriteLine();
                 if (choice == "" || choice.Length > 1)
                 {
-                    Console.WriteLine("   Invalid input!");
+                    Console.WriteLine("\nInvalid input!");
                 }
                 else if (choice == "c" || choice == "i")
                 {

@@ -19,50 +19,50 @@ namespace ShoppingCart.State_Pattern
             var rawProduct = cart._Cart.FirstOrDefault(i => i.ProductID == 1);
             if (rawProduct==null)
             {                
-                return "  That product isn't in the cart!";                
+                return "\nThat product isn't in the cart!\n";                
             }
             cart.DiscardItemFromCart(1);
-            return "  Removing milk from the cart!";
+            return "\nRemoving milk from the cart!\n";
         }
         public override string DiscardBread(Context context, Cart cart)
         {
             var rawProduct = cart._Cart.FirstOrDefault(i => i.ProductID == 2);
             if (rawProduct == null)
             {
-                return "  That product isn't in the cart!";
+                return "\nThat product isn't in the cart!\n";
             }
             cart.DiscardItemFromCart(2);
-            return "  Removing bread from the cart!";
+            return "\nRemoving bread from the cart!\n";
         }
         public override string DiscardEggs(Context context, Cart cart)
         {
             var rawProduct = cart._Cart.FirstOrDefault(i => i.ProductID == 3);
             if (rawProduct == null)
             {
-                return "  That product isn't in the cart!";
+                return "\nThat product isn't in the cart!\n";
             }
             cart.DiscardItemFromCart(3);
-            return "  Removing eggs from the cart   !";
+            return "\nRemoving eggs from the cart!\n";
         }
         public override string DiscardOranges(Context context, Cart cart)
         {
             var rawProduct = cart._Cart.FirstOrDefault(i => i.ProductID == 4);
             if (rawProduct == null)
             {
-                return "  That product isn't in the cart!";
+                return "\nThat product isn't in the cart!\n";
             }
             cart.DiscardItemFromCart(4);
-            return " Removing oranges from the cart!";
+            return "\nRemoving oranges from the cart!\n";
         }
         public override string DiscardPepsi(Context context, Cart cart)
         {
             var rawProduct = cart._Cart.FirstOrDefault(i => i.ProductID == 5);
             if (rawProduct == null)
             {
-                return "  That product isn't in the cart!";
+                return "\nThat product isn't in the cart!\n";
             }
             cart.DiscardItemFromCart(5);
-            return "  Removing pepsi from the cart!";
+            return "\nRemoving pepsi from the cart!\n";
         }
     }
 }

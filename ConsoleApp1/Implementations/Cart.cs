@@ -38,7 +38,7 @@ namespace ShoppingCart.Implementations
         {
 
             var ProductsCost = this._Cart.Sum(i => i.Cost);
-            Console.WriteLine("\t  Total price :" + ProductsCost);
+            Console.WriteLine("\t  Total price:" + ProductsCost);
             return ProductsCost;
 
         }
@@ -116,11 +116,11 @@ namespace ShoppingCart.Implementations
             char state = ' ';
             while (choice.Length != 1)
             {
-                Console.WriteLine("Please select a state , options : a,b,c,d, note: default tax is 'b' if no valid options are selected!");
+                Console.WriteLine("Please select a state, options: a, b, c, d, note: default tax is 'b' if no valid options are selected!");
                 choice = Console.ReadLine();
                 if (choice == "" || choice.Length > 1)
                 {
-                    Console.WriteLine("   Invalid input!");
+                    Console.WriteLine("\nInvalid input!");
                 }
                 else if (choice == "a" || choice == "b" || choice == "c" || choice == "d")
                 {
@@ -146,7 +146,7 @@ namespace ShoppingCart.Implementations
             }
             else
             {
-                Console.WriteLine("Not enough money !");
+                Console.WriteLine("Not enough money!");
             }
             Console.WriteLine("End PlaceOrderDetails");
             return orderID;

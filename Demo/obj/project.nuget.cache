@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5tkCqz7W0+1TXuKSKY09f3fMMEkygqmw6UtNxgG5g4OGaLfwo7AOmvTgNRdyw/az/kHTEStvG/zSTC/Rvl2M6g==",
+  "dgSpecHash": "h2GLOai+yFCAMTqGP0rsBPjJOgolUtFD+Q3PHcTcsP4cJwW4H77w+HwJ80V4knK2H00s6a8ccQpzXfwqNgvpKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\Demo\\Demo.csproj",
+  "projectFilePath": "C:\\designpatterns-master\\Demo\\Demo.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sayby\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\iniko\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

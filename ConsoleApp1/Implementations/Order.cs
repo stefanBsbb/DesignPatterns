@@ -9,7 +9,7 @@ namespace ShoppingCart.Implementations
     {
         public int PlaceOrderDetails(int cartID, int shippingAddressID)
         {
-            Console.WriteLine("\t  Order : PlaceOrderDetails");
+            Console.WriteLine("\t  Order: PlaceOrderDetails");
             return 10;
         }
     }

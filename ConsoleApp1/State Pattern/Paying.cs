@@ -12,13 +12,13 @@ namespace ShoppingCart.State_Pattern
         public override string Card(Context context)
         {
             Payment order = new CardPayment();
-            return "   Selecting card gateway...";
+            return "Selecting card gateway...\n";
         }
 
         public override string NetBanking(Context context)
         {
             Payment order2 = new NetBankingPayment();
-            return "   Selecting netbanking gateway";
+            return "Selecting netbanking gateway...\n";
         }
         public override string CardCITI(Context context)
         {

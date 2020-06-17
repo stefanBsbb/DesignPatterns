@@ -43,7 +43,7 @@ namespace StatePat
                 case 'f': result = "";
                     break;
                 default:
-                    result = "   Try again";
+                    result = "\nTry again!";
                     break;
             }
             Console.WriteLine(result);
@@ -79,7 +79,7 @@ namespace StatePat
                     break;
 
                 default:
-                    result = "  Try again";
+                    result = "\nTry again!";
                     break;
             }
             Console.WriteLine(result);
@@ -92,19 +92,18 @@ namespace StatePat
             {
                 case 'c':
                     result = Payment.Card(this);
-
                     break;
+
                 case 'n':
                     result = Payment.NetBanking(this);
                     break;
-
-                  
+                                      
                 case 'f':
                     result = "";
                     break;
 
                 default:
-                    result = "  Try again";
+                    result = "\nTry again!";
                     break;
             }
             Console.WriteLine(result);
@@ -129,7 +128,7 @@ namespace StatePat
                     break;
 
                 default:
-                    result = "  Try again";
+                    result = "\nTry again!";
                     break;
             }
             Console.WriteLine(result);
@@ -153,11 +152,17 @@ namespace StatePat
                     break;
 
                 default:
-                    result = "  Try again";
+                    result = "\nTry again!";
                     break;
             }
             Console.WriteLine(result);
         }
-
+        public void PrintCart()
+        {
+            foreach (var item in cart._Cart)
+            {
+                Console.WriteLine(item.Name);
+            }
+        }
     }
 }

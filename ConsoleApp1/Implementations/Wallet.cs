@@ -11,7 +11,7 @@ namespace ShoppingCart.Implementations
         {
             Random rand = new Random();            
             double balance = rand.Next(1,500);
-            Console.WriteLine("\t  Wallet : " + balance);
+            Console.WriteLine("\t  Wallet: " + balance);
             return balance;
         }
     }

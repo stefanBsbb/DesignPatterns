@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BuwrD9Nunfr3TNPvudqBStc8Mgmmz74+3TPqdvr4Z0sMS206uPdCGseF509PodkX/Z0peEcA48WqCxtE1I4liQ==",
+  "dgSpecHash": "xWNwtot3QHOIUjk2tUSpCyTB0kAZY5Y/w5R0+7xJu0fcUXKC+O0q2C6XUM2AeLbYbFoNGeVTVQBl9zH4LShQaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ShoppingCart.csproj",
+  "projectFilePath": "C:\\designpatterns-master\\ConsoleApp1\\ShoppingCart.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sayby\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\iniko\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

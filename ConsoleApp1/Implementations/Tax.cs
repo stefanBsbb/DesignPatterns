@@ -13,11 +13,11 @@ namespace ShoppingCart.Implementations
             double result = 0;
             switch (char.ToLower(state))
             {
-                case 'a':result = 5;break;
-                case 'b':result = 10;break;
-                case 'c':result = 15;break;
-                case 'd':result = 30;break;
-                default:;result = 10; break;
+                case 'a':result = 5; break;
+                case 'b':result = 10; break;
+                case 'c':result = 15; break;
+                case 'd':result = 30; break;
+                default:result = 10; break;
             }
             return result;
         }

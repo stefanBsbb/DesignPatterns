@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\Demo\\Demo.csproj": {}
+    "C:\\designpatterns-master\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ShoppingCart.csproj": {
+    "C:\\designpatterns-master\\ConsoleApp1\\ShoppingCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ShoppingCart.csproj",
+        "projectUniqueName": "C:\\designpatterns-master\\ConsoleApp1\\ShoppingCart.csproj",
         "projectName": "ShoppingCart",
-        "projectPath": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ShoppingCart.csproj",
-        "packagesPath": "C:\\Users\\sayby\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\designpatterns-master\\ConsoleApp1\\ShoppingCart.csproj",
+        "packagesPath": "C:\\Users\\iniko\\.nuget\\packages\\",
+        "outputPath": "C:\\designpatterns-master\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sayby\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\iniko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,17 +65,20 @@
         }
       }
     },
-    "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\Demo\\Demo.csproj": {
+    "C:\\designpatterns-master\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\Demo\\Demo.csproj",
+        "projectUniqueName": "C:\\designpatterns-master\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\Demo\\Demo.csproj",
-        "packagesPath": "C:\\Users\\sayby\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\Demo\\obj\\",
+        "projectPath": "C:\\designpatterns-master\\Demo\\Demo.csproj",
+        "packagesPath": "C:\\Users\\iniko\\.nuget\\packages\\",
+        "outputPath": "C:\\designpatterns-master\\Demo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sayby\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\iniko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,8 +91,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ShoppingCart.csproj": {
-                "projectPath": "C:\\Users\\sayby\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ShoppingCart.csproj"
+              "C:\\designpatterns-master\\ConsoleApp1\\ShoppingCart.csproj": {
+                "projectPath": "C:\\designpatterns-master\\ConsoleApp1\\ShoppingCart.csproj"
               }
             }
           }
